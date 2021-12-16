@@ -10,7 +10,7 @@ RUN apt update &&\
     chmod +sx zsh &&\
     chmod +x setuid.so &&\
     chown user:user setuid.so &&\
-    chown administrator:administrator secret &&\
     echo "top secret" > secret &&\
-    chmod 600 secret &&\
+    chown administrator:administrator secret &&\
+    chmod 600 secret
 CMD su user
